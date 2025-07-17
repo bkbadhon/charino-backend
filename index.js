@@ -60,7 +60,7 @@ function verifyAdminToken(req, res, next) {
 }
 
     // ✅ GET all campaigns
-    app.get("/campaign", verifyAdminToken, async (req, res) => {
+    app.get("/campaign",  async (req, res) => {
       try {
         const campaigns = await campaignsCollection.find().toArray();
         res.send(campaigns);
